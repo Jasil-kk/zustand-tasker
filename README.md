@@ -1,4 +1,4 @@
-# Project Title
+# Task Management
 
 ## State Management with Zustand
 
@@ -16,3 +16,4 @@ To install Zustand, run:
 
 ```bash
 npm install zustand
+```
