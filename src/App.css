@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 5%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #121212;
+}
+
+.input_wrapper {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: #e5e5e7;
+  color: #121212;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0 1rem 0 1.5em;
+  width: 100%;
+  height: 45px;
+  border-radius: 12px 0 0 12px;
+}
+input[type="text"]::placeholder {
+  color: #939393;
+}
+.save_btn {
+  min-width: 7rem;
+  height: 45px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background-color: #09a733;
+  color: #fff;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+ul {
+  margin-top: 1.35rem;
+  width: 100%;
+  max-width: 40rem;
+  list-style: none;
+}
+
+ul li {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  padding: 1em;
+  margin-bottom: 0.5rem;
+  transition: all 0.5s ease-in;
+}
+ul li p {
+  margin-left: 0.675rem;
+  font-size: 1em;
+  font-weight: 400;
+  color: #000000;
+}
+.edit_btn,
+.delete_btn {
+  min-width: 3.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(46, 124, 226);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+.edit_btn {
+  margin-left: auto;
+}
+.delete_btn {
+  margin-left: 0.5rem;
+  background-color: rgb(226, 46, 46);
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* checkbox style starts here */
+.checkbox-wrapper-30 .checkbox {
+  --bg: #fff;
+  --brdr: #d1d6ee;
+  --brdr-actv: #1e2235;
+  --brdr-hovr: #bbc1e1;
+  --dur: calc((var(--size, 2) / 2) * 0.6s);
+  display: inline-block;
+  width: calc(var(--size, 1) * 22px);
+  position: relative;
+}
+.checkbox-wrapper-30 .checkbox:after {
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+}
+.checkbox-wrapper-30 .checkbox > * {
+  position: absolute;
+}
+.checkbox-wrapper-30 .checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background-color: var(--bg);
+  border-radius: calc(var(--size, 1) * 4px);
+  border: calc(var(--newBrdr, var(--size, 1)) * 1px) solid;
+  color: var(--newBrdrClr, var(--brdr));
+  outline: none;
+  margin: 0;
+  padding: 0;
+  transition: all calc(var(--dur) / 3) linear;
+}
+.checkbox-wrapper-30 .checkbox input:hover,
+.checkbox-wrapper-30 .checkbox input:checked {
+  --newBrdr: calc(var(--size, 1) * 2);
+}
+.checkbox-wrapper-30 .checkbox input:hover {
+  --newBrdrClr: var(--brdr-hovr);
+}
+.checkbox-wrapper-30 .checkbox input:checked {
+  --newBrdrClr: var(--brdr-actv);
+  transition-delay: calc(var(--dur) / 1.3);
+}
+.checkbox-wrapper-30 .checkbox input:checked + svg {
+  --dashArray: 16 93;
+  --dashOffset: 109;
+}
+.checkbox-wrapper-30 .checkbox svg {
+  fill: none;
+  left: 0;
+  pointer-events: none;
+  stroke: var(--stroke, var(--border-active));
+  stroke-dasharray: var(--dashArray, 93);
+  stroke-dashoffset: var(--dashOffset, 94);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  top: 0;
+  transition: stroke-dasharray var(--dur), stroke-dashoffset var(--dur);
+}
+.checkbox-wrapper-30 .checkbox svg,
+.checkbox-wrapper-30 .checkbox input {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+/* checkbox style ends here */
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 1rem 3%;
+  }
+
+  h1 {
+    font-size: 1.785rem;
+  }
+
+  .input_wrapper {
+    margin-top: 1.875rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.875em;
+    padding: 0 0.8rem 0 1.25em;
+    border-radius: 10px 0 0 10px;
+  }
+  .save_btn {
+    min-width: 6.5rem;
+    border-radius: 0 10px 10px 0;
+    font-size: 0.785em;
+  }
+
+  ul {
+    margin-top: 1.125rem;
+  }
+
+  ul li {
+    border-radius: 5px;
+    padding: 0.875em 0.65em;
+  }
+  ul li p {
+    margin-left: 0.6rem;
+    font-size: 0.85em;
+  }
+  .edit_btn,
+  .delete_btn {
+    min-width: 3.25rem;
+    font-size: 0.7em;
+  }
+  .delete_btn {
+    margin-left: 0.4rem;
+  }
+}
