@@ -24,6 +24,33 @@ h1 {
   color: #121212;
 }
 
+.tabs_container {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f7;
+  border-radius: 8px;
+  padding: 5px;
+}
+.tabs_container li {
+  width: 100%;
+  height: 1.65rem;
+  text-align: center;
+  font-size: 0.875em;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  color: #363636;
+}
+.tabs_container li.active {
+  background-color: #fff;
+  color: #121212;
+}
+
 .input_wrapper {
   margin-top: 2rem;
   width: 100%;
@@ -60,14 +87,14 @@ input[type="text"]::placeholder {
   font-weight: 500;
 }
 
-ul {
+.taks_list_container {
   margin-top: 1.35rem;
   width: 100%;
   max-width: 40rem;
   list-style: none;
 }
 
-ul li {
+.taks_list_container li {
   width: 100%;
   background-color: #ffffff;
   border-radius: 8px;
@@ -77,7 +104,7 @@ ul li {
   margin-bottom: 0.5rem;
   transition: all 0.5s ease-in;
 }
-ul li p {
+.taks_list_container li p {
   margin-left: 0.675rem;
   font-size: 1em;
   font-weight: 400;
@@ -104,6 +131,13 @@ ul li p {
 button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.notfound {
+  margin-top: 3rem;
+  color: #b8b6b6;
+  font-size: 0.875em;
+  text-align: center;
 }
 
 /* checkbox style starts here */
@@ -185,6 +219,14 @@ button:disabled {
     font-size: 1.785rem;
   }
 
+  .tabs_container {
+    margin-top: 1rem;
+  }
+  .tabs_container li {
+    height: 1.5rem;
+    font-size: 0.8em;
+  }
+
   .input_wrapper {
     margin-top: 1.875rem;
   }
@@ -200,15 +242,15 @@ button:disabled {
     font-size: 0.785em;
   }
 
-  ul {
+  .taks_list_container {
     margin-top: 1.125rem;
   }
 
-  ul li {
+  .taks_list_container li {
     border-radius: 5px;
     padding: 0.875em 0.65em;
   }
-  ul li p {
+  .taks_list_container li p {
     margin-left: 0.6rem;
     font-size: 0.85em;
   }
